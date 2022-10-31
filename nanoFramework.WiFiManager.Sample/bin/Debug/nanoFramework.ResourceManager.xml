@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nanoFramework.ResourceManager</name>
+    </assembly>
+    <members>
+        <member name="T:System.Resources.ResourceManager">
+            <summary>
+            Represents a resource manager that provides convenient access to culture-specific resources at run time.
+            </summary>
+        </member>
+        <member name="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly)">
+            <summary>
+            Initializes a new instance of the ResourceManager class that looks up resources contained in files with the specified root name in the given assembly.
+            </summary>
+            <param name="baseName">The root name of the resource file without its extension but including any fully qualified namespace name. 
+            For example, the root name for the resource file named MyApplication.MyResource.en-US.resources is MyApplication.MyResource.</param>
+            <param name="assembly">The main assembly for the resources.</param>
+        </member>
+        <member name="T:nanoFramework.Runtime.Native.ResourceUtility">
+            <summary>
+            Helper class to access nanoFramework application managed resources.
+            </summary>
+        </member>
+        <member name="M:nanoFramework.Runtime.Native.ResourceUtility.GetObject(System.Resources.ResourceManager,System.Enum)">
+            <summary>
+            Gets the value of a specified <see cref="T:System.Object"/> resource for the current system culture.
+            </summary>
+            <param name="rm">The <see cref="T:System.Resources.ResourceManager"/> that contains the specified resources.</param>
+            <param name="id">The integer identifier for the specified resource.</param>
+            <returns>The value of the specified resource for the current system culture.</returns>
+        </member>
+        <member name="M:nanoFramework.Runtime.Native.ResourceUtility.GetObject(System.Resources.ResourceManager,System.Enum,System.Int32,System.Int32)">
+            <summary>
+            Gets the value of a specified <see cref="T:System.Object"/> resource for the current system culture.
+            </summary>
+            <param name="rm">The <see cref="T:System.Resources.ResourceManager"/> that contains the specified resources.</param>
+            <param name="id">The integer identifier for the specified resource.</param>
+            <param name="offset">The offset for retrieving the value.</param>
+            <param name="length">The length of the value to retrieve.</param>
+            <returns>The value of the specified resource for the current system culture.</returns>
+        </member>
+        <member name="M:nanoFramework.Runtime.Native.ResourceUtility.GetDelimitedStringResources(System.Resources.ResourceManager,System.Enum)">
+            <summary>
+            Retrieves the string representations of the specified resources.
+            </summary>
+            <param name="rm">The <see cref="T:System.Resources.ResourceManager"/> that contains the specified resources.</param>
+            <param name="resource">An enumerated value that specifies the type of the resources for which you want to get the string representations.</param>
+            <returns>The string representations of the specified resources.</returns>
+        </member>
+        <member name="M:nanoFramework.Runtime.Native.ResourceUtility.GetDelimitedStringResource(System.Resources.ResourceManager,System.Enum,System.Int32)">
+            <summary>
+            Retrieves the string representation of a specified resource.
+            </summary>
+            <param name="rm">The <see cref="T:System.Resources.ResourceManager"/> that contains the specified resources.</param>
+            <param name="resource">An enumerated value that specifies the type of the resources for which you want to get the string representations.</param>
+            <param name="i">The index number of the resource (in the resource manager's resource collection) for which you want to get the string representation.</param>
+            <returns>The string representations of the specified resource.</returns>
+        </member>
+    </members>
+</doc>
